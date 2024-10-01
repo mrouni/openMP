@@ -90,3 +90,11 @@ We tested the method for values of the acceleration factor $\omega = 1$, $1.95$,
 | $\omega = 1.99$ | 1,318       | 0.543             | 1.99             |
 
 We created a log-log plot of the error of each iteration versus the number of iterations for both methods (Liebmann, SOR) and for the three acceleration factor values.
+
+The SOR method for acceleration factor \( \omega = 1 \) coincides with the Gauss-Seidel method for \( i + j \% 2 == 1 \) and requires about half the number of iterations compared to the Liebmann method (207,000) to provide a solution. This makes sense because each iteration performs two steps. The execution time for each number of cores is approximately the same for both methods.
+
+For \( \omega = 1.95 \), the iterations of the SOR method drop from about 121,500 to 4,500, and the execution time drops from 98 seconds to 3.5 seconds.
+
+For \( \omega = 1.99 \), the iterations drop to 1,300, and the execution time drops to 1 second.
+
+We observe that the number of iterations is not affected by the number of cores to which the calculations are distributed. For 8 cores, the execution time increases instead of decreasing, which is logical since the physical cores of the processor running the program are 4.
