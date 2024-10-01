@@ -66,8 +66,6 @@ $$
 f_{i,j}^{n+1} = (1 - \omega) f_{i,j}^n + \frac{\omega}{4} \left( f_{i+1,j}^{n+1} + f_{i-1,j}^{n+1} + f_{i,j+1}^{n+1} + f_{i,j-1}^{n+1} - h^2 S_{i,j} \right) 
 $$
 
-
-
 where $\omega$ is the acceleration factor of the so-called Successive Over-Relaxation (SOR) method based on Gauss-Seidel.
 
 We tested the method for values of the acceleration factor $\omega = 1$, $1.95$, and $1.99$ for 1, 2, 4, and 8 cores. Below are the cumulative results compared with the Liebmann method from the first part of the work.
@@ -91,4 +89,4 @@ We tested the method for values of the acceleration factor $\omega = 1$, $1.95$,
 | $\omega = 1.95$ | 4,543       | 1.814             | 2.04             |
 | $\omega = 1.99$ | 1,318       | 0.543             | 1.99             |
 
-We created a log-log plot of the error of each iteration versus the number of iterations for both methods (Liebmann, SOR) and for the three acceleration factor values. Below are the four curves.
+We created a log-log plot of the error of each iteration versus the number of iterations for both methods (Liebmann, SOR) and for the three acceleration factor values.
